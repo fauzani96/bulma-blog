@@ -1,0 +1,93 @@
+@charset "utf-8";
+@import '../node_modules/bulma/sass/utilities/initial-variables';
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Source Sans Pro:400,500,600,700,900');
+
+$orange: #f86e21;
+$blue: #19a9bc;
+
+// Body text font: Source Sans Pro
+$family-sans-serif: 'Source Sans Pro', sans-serif;
+
+// Title font: Montserrat
+$family-secondary: 'Montserrat', sans-serif;
+
+// Primary color: #F86E21
+$primary: $orange;
+
+// Link color: #19A9BC
+$link: $blue;
+
+$size-1: 5rem;
+$size-2: 3rem;
+
+// Title font: Montserrat
+$title-family: $family-secondary;
+$title-weight: 900;
+
+@import '../node_modules/bulma/bulma';
+
+.post-image {
+  border-radius: 8px;
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+}
+
+.medium-height {
+  max-height: 200px;
+}
+
+nav.navbar a.active {
+  color: $link;
+  border-bottom: 2px solid;
+  margin-top: 2px;
+}
+
+@media screen and (max-width: 768px) {
+  .columns {
+    margin: 0;
+  }
+
+  nav.navbar a.active {
+    border-bottom: none;
+  }
+}
+
+@include until($desktop) {
+  .navbar-menu {
+    display: block;
+    opacity: 0;
+
+    position: absolute;
+    left: 0;
+    right: 0;
+
+    transform: translateY(-50%);
+    transition: all 0.4s ease-in-out;
+    pointer-events: none;
+  }
+
+  .navbar-menu.is-active {
+    opacity: 1;
+    transform: none;
+    pointer-events: auto;
+  }
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
+  margin-right: 6px;
+}
+
+.ellipsis {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.two-line {
+  -webkit-line-clamp: 2;
+}
