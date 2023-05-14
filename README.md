@@ -1,2 +1,8 @@
 # bulma-blog
-Static blog page, made with Bulma
+
+A Static blog page for fulfilling requirement for
+[Apwin](https://www.apwin.com/) recruitment as a Front End Developer
+
+##
+
+Made with [Bulma](https://bulma.io/)
